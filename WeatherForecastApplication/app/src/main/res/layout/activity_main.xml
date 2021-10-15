@@ -1,0 +1,70 @@
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".ui.MainActivity"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/llForecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTemperature"
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:background="@drawable/border_white">
+
+        <TextView
+            android:id="@+id/tvFiveDayForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAILY WEATHER FORECAST"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_calendar"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvForecast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="22sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCity"
+        android:textSize="30sp"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

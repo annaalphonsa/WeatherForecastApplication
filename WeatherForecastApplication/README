@@ -1,0 +1,6 @@
+More features could be added if had enough time such as:
+Better UI
+	•	Caching in Room database
+	•	Display more data from the API such as wind, temperatures etc
+	•	Detect GPS and use that instead of hardcoding
+	•	Implement a Settings page where can provide options to change location, select temperature unit etc
